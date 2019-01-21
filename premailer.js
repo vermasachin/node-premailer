@@ -103,7 +103,7 @@ exports.prepare = function (_options, next) {
 			apiResponse = JSON.parse(body);
 		} catch (ex) {
 			if (body.match(/Application Error/gi)) {
-				return next('Premailer returned an unkown server error');
+				return next('Premailer returned an unknown server error');
 			}
 			return next(ex);
 		}
